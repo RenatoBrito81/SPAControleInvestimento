@@ -62,4 +62,8 @@ export class InvestimentoService {
     novoRegistro.data = investimento.data;
     this.dadosInvestimento.push(novoRegistro);
   }
+
+  getTotalInvestimento(): number {
+    return this.dadosInvestimento.map(t => t.valor).reduce((acc, value) => acc + value, 0);
+  }
 }

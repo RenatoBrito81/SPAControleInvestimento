@@ -1,0 +1,19 @@
+table {
+    width: 100%;
+}
+  
+th.mat-sort-header-sorted {
+    color: black;
+}
+  
+::ng-deep .mat-sort-header-sorted {
+    color: rgba(230, 79, 8, 0.911);
+}
+  
+::ng-deep .mat-sort-header-arrow {
+    color: rgba(230, 79, 8, 0.911);
+}
+
+tr.mat-footer-row {
+    font-weight: bold;
+  }
