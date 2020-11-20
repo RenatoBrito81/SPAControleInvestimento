@@ -1,0 +1,50 @@
+<div class="titulo">
+    <h2>Alterar Investimento</h2>
+</div>
+<form class="example-form">
+    <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>Id:</mat-label>
+        <input 
+            matInput
+            placeholder="Id"
+            [value]="dadosInvestimento.id"
+        >
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>Tipo de Investimento:</mat-label>
+        <mat-select [(value)]="dadosInvestimento.tipoInvestimento">
+			<mat-option *ngFor="let tpI of tipoInvestimentoAtivo" [value]="tpI">{{tpI}}</mat-option>
+		</mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>Valor:</mat-label>
+        <input 
+            type="number"
+            min="0"
+            max="999999"
+            step="0.01"
+            matInput
+            required
+            [formControl]="invValor"
+            placeholder="100,00"
+            [(ngModel)]="dadosInvestimento.valor"
+        >
+        <mat-error *ngIf="invValor.invalid">O Valor do Investimento é obrigatório.</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>Data:</mat-label>
+        <input 
+            matInput
+            [matDatepicker]="picker"
+            disabled
+            [(value)]="dadosInvestimento.data"
+        >
+        <mat-datepicker-toggle matSuffix [for]="picker">
+          </mat-datepicker-toggle>
+          <mat-datepicker #picker disabled="false"></mat-datepicker>
+    </mat-form-field>
+    <div class="botoes">
+        <button mat-raised-button color="primary" (click)="salvar()">Salvar</button>
+        <button mat-raised-button color="accent" [routerLink]="['/listarInvestimento']">Cancelar</button>
+    </div>
+</form>

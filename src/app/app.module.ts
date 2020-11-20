@@ -16,6 +16,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -24,6 +25,8 @@ import { AlterarTipoInvestimentoComponent } from './components/alterar-tipo-inve
 import { NovoTipoInvestimentoComponent } from './components/novo-tipo-investimento/novo-tipo-investimento.component';
 import { DialogMessageComponent } from './components/dialog-message/dialog-message.component';
 import { ListarInvestimentoComponent } from './components/listar-investimento/listar-investimento.component';
+import { AlterarInvestimentoComponent } from './components/alterar-investimento/alterar-investimento.component';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,8 @@ import { ListarInvestimentoComponent } from './components/listar-investimento/li
     AlterarTipoInvestimentoComponent,
     NovoTipoInvestimentoComponent,
     DialogMessageComponent,
-    ListarInvestimentoComponent
+    ListarInvestimentoComponent,
+    AlterarInvestimentoComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +55,9 @@ import { ListarInvestimentoComponent } from './components/listar-investimento/li
     MatInputModule,
     MatFormFieldModule,
     MatSelectModule,
-    MatDialogModule
+    MatDialogModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
