@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AlterarTipoInvestimentoComponent } from './components/alterar-tipo-investimento/alterar-tipo-investimento.component';
 import { HomeComponent } from './components/home/home.component';
 import { ListarTipoInvestimentoComponent } from './components/listar-tipo-investimento/listar-tipo-investimento.component';
 
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'listarTipoInvestimento',
     component: ListarTipoInvestimentoComponent
+  },
+  {
+    path: 'alterarTipoInvestimento/:id',
+    component: AlterarTipoInvestimentoComponent
   },
   {
     path: '',

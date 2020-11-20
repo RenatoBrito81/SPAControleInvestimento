@@ -6,7 +6,7 @@ import { TipoInvestimento } from 'src/app/model/tipoInvestimento';
 })
 export class TipoInvestimentoService {
 
-  dadosTipoInvestimento: TipoInvestimento[] = [
+  private dadosTipoInvestimento: TipoInvestimento[] = [
     { id: 1, tipoInvestimento: "Poupança", ativo: true },
     { id: 2, tipoInvestimento: "CDB", ativo: true }
   ];
@@ -15,5 +15,25 @@ export class TipoInvestimentoService {
 
   getAllTipoInvestimento(): TipoInvestimento[] {
     return this.dadosTipoInvestimento;
+  }
+
+  getTipoInvestimentoById(posicao: number): TipoInvestimento {
+    var consulta = this.dadosTipoInvestimento.filter((inv) => {
+      if(inv.id === posicao){
+        return inv;
+      }
+    });
+    return consulta[0];
+  }
+
+  updateTipoInvestimentoById(posicao: number, tipoInvestimento: TipoInvestimento) {
+    var item = this.dadosTipoInvestimento.find((inv) => {
+      if(inv.id === posicao){
+        return inv;
+      }
+    });
+
+    var index = this.dadosTipoInvestimento.indexOf(item);
+    this.dadosTipoInvestimento[index] = tipoInvestimento;
   }
 }
