@@ -23,6 +23,7 @@ import { ListarTipoInvestimentoComponent } from './components/listar-tipo-invest
 import { AlterarTipoInvestimentoComponent } from './components/alterar-tipo-investimento/alterar-tipo-investimento.component';
 import { NovoTipoInvestimentoComponent } from './components/novo-tipo-investimento/novo-tipo-investimento.component';
 import { DialogMessageComponent } from './components/dialog-message/dialog-message.component';
+import { ListarInvestimentoComponent } from './components/listar-investimento/listar-investimento.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { DialogMessageComponent } from './components/dialog-message/dialog-messa
     ListarTipoInvestimentoComponent,
     AlterarTipoInvestimentoComponent,
     NovoTipoInvestimentoComponent,
-    DialogMessageComponent
+    DialogMessageComponent,
+    ListarInvestimentoComponent
   ],
   imports: [
     BrowserModule,

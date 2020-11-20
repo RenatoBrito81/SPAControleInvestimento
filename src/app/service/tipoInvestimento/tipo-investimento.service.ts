@@ -51,7 +51,25 @@ export class TipoInvestimentoService {
     }
   }
 
+  getMaxIndex(): number {
+    var index = Math.max.apply(Math, this.dadosTipoInvestimento.map( inv => inv.id));
+    index++;
+    return index;
+  }
+
   insertTipoInvestimento(tipoInvestimento: string, ativo: string) {
-    //
+    var novoRegistro: TipoInvestimento = new TipoInvestimento();
+    novoRegistro.id = this.getMaxIndex();
+    novoRegistro.tipoInvestimento = tipoInvestimento;
+    novoRegistro.ativo = ativo === 'sim' ? true : false;
+    this.dadosTipoInvestimento.push(novoRegistro);
+  }
+
+  getTipoInvestimentoAtivo(): string[] {
+    return this.dadosTipoInvestimento.filter((inv) => {
+      if(inv.ativo){
+        return inv;
+      }
+    }).map((tp) => tp.tipoInvestimento);
   }
 }

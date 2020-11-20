@@ -26,6 +26,7 @@ export class NovoTipoInvestimentoComponent implements OnInit {
   salvar(): void {
     if(this.tipoInvestimentoService.checkTipoInvestimento(this.tipoInvestimento)){
       this.tipoInvestimentoService.insertTipoInvestimento(this.tipoInvestimento, this.ativo);
+      this.router.navigateByUrl('/listarTipoInvestimento');
     }
     else{
       this.dialog.open(DialogMessageComponent, {
