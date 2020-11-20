@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
@@ -15,12 +15,14 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ListarTipoInvestimentoComponent } from './components/listar-tipo-investimento/listar-tipo-investimento.component';
 import { AlterarTipoInvestimentoComponent } from './components/alterar-tipo-investimento/alterar-tipo-investimento.component';
-
+import { NovoTipoInvestimentoComponent } from './components/novo-tipo-investimento/novo-tipo-investimento.component';
+import { DialogMessageComponent } from './components/dialog-message/dialog-message.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +30,16 @@ import { AlterarTipoInvestimentoComponent } from './components/alterar-tipo-inve
     HomeComponent,
     HeaderComponent,
     ListarTipoInvestimentoComponent,
-    AlterarTipoInvestimentoComponent
+    AlterarTipoInvestimentoComponent,
+    NovoTipoInvestimentoComponent,
+    DialogMessageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule, 
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
@@ -43,7 +48,8 @@ import { AlterarTipoInvestimentoComponent } from './components/alterar-tipo-inve
     MatCheckboxModule,
     MatInputModule,
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

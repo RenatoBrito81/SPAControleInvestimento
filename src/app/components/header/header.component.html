@@ -19,7 +19,7 @@
             <span class="span-text">TIPO DE INVESTIMENTO</span>
         </button>
         <mat-menu #tipoInvestimentoMenu="matMenu" xPosition="after">
-            <button mat-menu-item>
+            <button mat-menu-item [routerLink]="['/novoTipoInvestimento']">
                 <mat-icon>add_box</mat-icon>
                 <span class="span-text">Novo</span>
             </button>

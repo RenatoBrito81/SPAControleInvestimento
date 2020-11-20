@@ -20,7 +20,6 @@ export class AlterarTipoInvestimentoComponent implements OnInit {
 
   ngOnInit(): void {
     this.idTipoInvestimento = +this.activatedRoute.snapshot.paramMap.get('id');
-    console.log("id =", this.idTipoInvestimento);
 
     if(this.idTipoInvestimento > 0){
       this.dadosTipoInvestimento = this.tipoInvestimentoService.getTipoInvestimentoById(this.idTipoInvestimento);

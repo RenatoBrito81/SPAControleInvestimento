@@ -1,0 +1,27 @@
+<div class="titulo">
+    <h2>Cadastrar Tipo de Investimento</h2>
+</div>
+<form class="example-form">
+    <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>Tipo de Investimento:</mat-label>
+        <input 
+            matInput
+            [(ngModel)]="tipoInvestimento"
+            placeholder="Ex.: Poupança"
+            [formControl]="tipoInv"
+            required
+        >
+        <mat-error *ngIf="tipoInv.invalid">O Tipo de Investimento é obrigatório.</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>Ativo:</mat-label>
+        <mat-select [(value)]="ativo" required>
+			<mat-option value="sim">Sim</mat-option>
+			<mat-option value="nao">Não</mat-option>
+		</mat-select>
+    </mat-form-field>
+    <div class="botoes">
+        <button mat-raised-button color="primary" (click)="salvar()">Salvar</button>
+        <button mat-raised-button color="accent" [routerLink]="['/listarTipoInvestimento']">Cancelar</button>
+    </div>
+</form>

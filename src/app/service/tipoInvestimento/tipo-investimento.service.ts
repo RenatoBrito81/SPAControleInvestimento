@@ -36,4 +36,22 @@ export class TipoInvestimentoService {
     var index = this.dadosTipoInvestimento.indexOf(item);
     this.dadosTipoInvestimento[index] = tipoInvestimento;
   }
+
+  checkTipoInvestimento(tipoInvestimento: string): boolean {
+    var consulta = this.dadosTipoInvestimento.find((inv) => {
+      if(inv.tipoInvestimento === tipoInvestimento){
+        return inv;
+      }
+    });
+    if(consulta === undefined){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+
+  insertTipoInvestimento(tipoInvestimento: string, ativo: string) {
+    //
+  }
 }

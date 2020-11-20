@@ -30,3 +30,7 @@
     <tr mat-header-row *matHeaderRowDef="colunasTabela"></tr>
     <tr mat-row *matRowDef="let row; columns: colunasTabela;"></tr>
 </table>
+
+<div class="botoes">
+    <button mat-raised-button color="accent" [routerLink]="['/home']">Cancelar</button>
+</div>
