@@ -9,7 +9,7 @@
     </mat-toolbar-row>
 
     <mat-toolbar-row>
-        <button mat-button>
+        <button mat-button [routerLink]="['/home']">
             <mat-icon>home</mat-icon>
             <span class="span-text">HOME</span>
         </button>
@@ -23,7 +23,7 @@
                 <mat-icon>add_box</mat-icon>
                 <span class="span-text">Novo</span>
             </button>
-            <button mat-menu-item>
+            <button mat-menu-item [routerLink]="['/listarTipoInvestimento']">
                 <mat-icon>list</mat-icon>
                 <span class="span-text">Listar</span>
             </button>
