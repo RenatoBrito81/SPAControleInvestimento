@@ -34,7 +34,7 @@
             <span class="span-text">INVESTIMENTO</span>
         </button>
         <mat-menu #investimentoMenu="matMenu" xPosition="after">
-            <button mat-menu-item>
+            <button mat-menu-item [routerLink]="['/novoInvestimento']">
                 <mat-icon>add_box</mat-icon>
                 <span class="span-text">Novo</span>
             </button>

@@ -27,6 +27,7 @@ import { DialogMessageComponent } from './components/dialog-message/dialog-messa
 import { ListarInvestimentoComponent } from './components/listar-investimento/listar-investimento.component';
 import { AlterarInvestimentoComponent } from './components/alterar-investimento/alterar-investimento.component';
 import { MatNativeDateModule } from '@angular/material/core';
+import { NovoInvestimentoComponent } from './components/novo-investimento/novo-investimento.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     NovoTipoInvestimentoComponent,
     DialogMessageComponent,
     ListarInvestimentoComponent,
-    AlterarInvestimentoComponent
+    AlterarInvestimentoComponent,
+    NovoInvestimentoComponent
   ],
   imports: [
     BrowserModule,

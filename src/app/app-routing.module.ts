@@ -5,6 +5,7 @@ import { AlterarTipoInvestimentoComponent } from './components/alterar-tipo-inve
 import { HomeComponent } from './components/home/home.component';
 import { ListarInvestimentoComponent } from './components/listar-investimento/listar-investimento.component';
 import { ListarTipoInvestimentoComponent } from './components/listar-tipo-investimento/listar-tipo-investimento.component';
+import { NovoInvestimentoComponent } from './components/novo-investimento/novo-investimento.component';
 import { NovoTipoInvestimentoComponent } from './components/novo-tipo-investimento/novo-tipo-investimento.component';
 
 const routes: Routes = [
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'alterarInvestimento/:id',
     component: AlterarInvestimentoComponent
+  },
+  {
+    path: 'novoInvestimento',
+    component: NovoInvestimentoComponent
   },
   {
     path: '',
