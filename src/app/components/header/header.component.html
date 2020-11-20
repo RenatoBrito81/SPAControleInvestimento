@@ -1,0 +1,47 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <div class="flexbox-parent">
+            <div layout="row" layout-align="center center">
+                <span>CONTROLE DE INSVESTIMENTO</span>
+                <span class="menu-spacer"></span>
+            </div>
+        </div>
+    </mat-toolbar-row>
+
+    <mat-toolbar-row>
+        <button mat-button>
+            <mat-icon>home</mat-icon>
+            <span class="span-text">HOME</span>
+        </button>
+
+        <button mat-button [matMenuTriggerFor]="tipoInvestimentoMenu">
+            <mat-icon>library_books</mat-icon>
+            <span class="span-text">TIPO DE INVESTIMENTO</span>
+        </button>
+        <mat-menu #tipoInvestimentoMenu="matMenu" xPosition="after">
+            <button mat-menu-item>
+                <mat-icon>add_box</mat-icon>
+                <span class="span-text">Novo</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>list</mat-icon>
+                <span class="span-text">Listar</span>
+            </button>
+        </mat-menu>
+
+        <button mat-button [matMenuTriggerFor]="investimentoMenu">
+            <mat-icon>attach_money</mat-icon>
+            <span class="span-text">INVESTIMENTO</span>
+        </button>
+        <mat-menu #investimentoMenu="matMenu" xPosition="after">
+            <button mat-menu-item>
+                <mat-icon>add_box</mat-icon>
+                <span class="span-text">Novo</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>list</mat-icon>
+                <span class="span-text">Listar</span>
+            </button>
+        </mat-menu>
+    </mat-toolbar-row>
+</mat-toolbar>

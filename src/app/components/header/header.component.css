@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu-spacer {
+    flex: 1 1 auto;
+}
+
+.span-text {
+    margin-left: 10px;
+}
+
+.mat-toolbar-row {
+    justify-content: space-evenly;
+}
